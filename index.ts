@@ -22,6 +22,6 @@ type SearchEventsOptions = {
   eventType: 'courses' | 'groups';
 }
 
-function searchEvents(options) {
-
+function searchEvents(options: SearchEventsOptions) {
+  const events = options.eventType === 'courses' ? courses : studyGroups;
 }
