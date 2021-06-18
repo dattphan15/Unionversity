@@ -23,5 +23,11 @@ type SearchEventsOptions = {
 }
 
 function searchEvents(options: SearchEventsOptions) {
-  const events = options.eventType === 'courses' ? courses : studyGroups;
+  const events: (Course | StudyGroup)[] = options.eventType === 'courses' ? courses : studyGroups;
+
+  events.filter((event: Course | StudyGroup) => {
+    if (typeof options.query === 'number') {
+      return event.id === options.query;
+    }
+  })
 }
