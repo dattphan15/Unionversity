@@ -36,3 +36,7 @@ function searchEvents(options: SearchEventsOptions) {
 
   })
 }
+
+const searchResults = searchEvents({ query: 'art', eventType: 'courses'});
+
+console.log(searchResults);
