@@ -1,5 +1,5 @@
-import courses from "./courses";
-import studyGroups from "./studyGroups";
+import courses from './courses';
+import studyGroups from './studyGroups';
 
 type Course = {
   id: number;
@@ -45,4 +45,7 @@ function enroll(event: Course | StudyGroup) {
 
 const searchResults = searchEvents({ query: 'art', eventType: 'courses'});
 
-console.log(searchResults);
+// test by adding the first item in searchResults to the enrolledEvents array.
+enroll(searchResults[0]);
+
+console.log(enrolledEvents);
