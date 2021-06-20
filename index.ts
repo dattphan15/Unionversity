@@ -37,6 +37,12 @@ function searchEvents(options: SearchEventsOptions) {
   })
 }
 
+let enrolledEvents = [];
+
+function enroll(event: Course | StudyGroup) {
+  // ...
+}
+
 const searchResults = searchEvents({ query: 'art', eventType: 'courses'});
 
 console.log(searchResults);
