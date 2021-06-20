@@ -37,7 +37,7 @@ function searchEvents(options: SearchEventsOptions) {
   })
 }
 
-let enrolledEvents = [];
+let enrolledEvents: (Course | StudyGroup)[] = [];
 
 function enroll(event: Course | StudyGroup) {
   // ...
