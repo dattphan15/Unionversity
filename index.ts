@@ -13,7 +13,7 @@ type StudyGroup = {
   id: number;
   courseId: number;
   title: string;
-  keywords: string;
+  keywords: string[];
   eventType: string;
 }
 
@@ -29,5 +29,10 @@ function searchEvents(options: SearchEventsOptions) {
     if (typeof options.query === 'number') {
       return event.id === options.query;
     }
+
+    if (typeof options.query === 'string') {
+      return event.keywords.includes(options.query);
+    }
+
   })
 }
