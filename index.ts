@@ -40,7 +40,7 @@ function searchEvents(options: SearchEventsOptions) {
 let enrolledEvents: (Course | StudyGroup)[] = [];
 
 function enroll(event: Course | StudyGroup) {
-  // ...
+  enrolledEvents = [...enrolledEvents, event];
 }
 
 const searchResults = searchEvents({ query: 'art', eventType: 'courses'});
